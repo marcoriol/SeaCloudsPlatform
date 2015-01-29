@@ -26,6 +26,7 @@
         <module>deployer</module>
         <module>planner</module>
         <module>dashboard</module>
+        <module>sla-core</module>
     </modules>
     <packaging>pom</packaging>
     <name>SeaClouds Platform</name>
