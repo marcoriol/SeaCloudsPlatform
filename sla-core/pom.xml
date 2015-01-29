@@ -63,6 +63,7 @@
 						<exclude>src/test/resources/**</exclude>
 						<exclude>src/main/resources/**</exclude>
 						<exclude>LICENSE.txt</exclude>
+                        <exclude>configuration.properties</exclude>
 					</excludes>
 				</configuration>
 				<executions>
