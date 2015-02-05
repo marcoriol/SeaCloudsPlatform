@@ -1,6 +1,6 @@
 /**
  * Copyright 2014 SeaClouds
- * Contact: SeaClouds
+ * Contact: mbarrientos@lcc.uma.es
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -14,10 +14,27 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package eu.seaclouds.platform.dashboard;
 
-public interface ConfigParameters {
-    public static String MONITOR_ENDPOINT = "http://localhost:8081";    // CHANGE THIS
-    public static String DEPLOYER_ENDPOINT = "http://localhost:8081";   // CHANGE THIS
-    public static String SLA_ENDPOINT = "http://localhost:8082";        // CHANGE THIS
+import seaclouds.deployer.DeployerEngineLauncher;
+
+import static org.testng.Assert.*;
+
+public class DeployerEngineLauncherTest {
+
+    DeployerEngineLauncher deployer;
+
+    @org.testng.annotations.BeforeMethod
+    public void setUp() throws Exception {
+        deployer = DeployerEngineLauncher.newInstance();
+    }
+
+    @org.testng.annotations.AfterMethod
+    public void tearDown() throws Exception {
+        deployer.stop();
+    }
+
+    @org.testng.annotations.Test
+    public void testStart() throws Exception {
+        deployer.start();
+    }
 }

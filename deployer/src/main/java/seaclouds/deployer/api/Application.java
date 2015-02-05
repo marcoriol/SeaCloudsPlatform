@@ -14,7 +14,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package eu.seaclouds.platform.dashboard.servlets;
+package seaclouds.deployer.api;
 
 import brooklyn.rest.client.BrooklynApi;
 import brooklyn.rest.domain.ApplicationSummary;
@@ -23,24 +23,32 @@ import brooklyn.rest.domain.LocationSummary;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.sun.net.httpserver.HttpServer;
+import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import eu.seaclouds.platform.dashboard.SeaCloudsProperties;
 import org.jboss.resteasy.client.ClientResponseFailure;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ListApplicationsServlet extends HttpServlet {
+import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Path;
+import javax.xml.ws.Response;
+
+@Path("/application")
+public class Application {
+
     final static BrooklynApi BROOKLKYN_API = new BrooklynApi(SeaCloudsProperties.get(SeaCloudsProperties.DEPLOYER_ENDPOINT));
 
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @GET
+    @Produces("text/plain")
+    public String listApplications() {
         List<ApplicationSummary> applicationSummaries = BROOKLKYN_API.getApplicationApi().list();
+        Response response;
 
         Collections.sort(applicationSummaries, new Comparator<ApplicationSummary>() {
             @Override
@@ -118,5 +126,19 @@ public class ListApplicationsServlet extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(new Gson().toJson(jsonResult));
         }
+    }
+    }
+
+    public static void main(String[] args) throws IOException {
+        HttpServer server = HttpServerFactory.create("http://localhost:9998/");
+        server.start();
+
+        System.out.println("Server running");
+        System.out.println("Visit: http://localhost:9998/helloworld");
+        System.out.println("Hit return to stop...");
+        System.in.read();
+        System.out.println("Stopping server");
+        server.stop(0);
+        System.out.println("Server stopped");
     }
 }

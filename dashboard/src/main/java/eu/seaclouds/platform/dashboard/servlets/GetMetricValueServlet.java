@@ -17,12 +17,8 @@
 package eu.seaclouds.platform.dashboard.servlets;
 
 import brooklyn.rest.client.BrooklynApi;
-import brooklyn.rest.domain.EntitySummary;
-import brooklyn.rest.domain.SensorSummary;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import eu.seaclouds.platform.dashboard.ConfigParameters;
+import eu.seaclouds.platform.dashboard.SeaCloudsProperties;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,11 +26,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author Adrian Nieto
- */
 public class GetMetricValueServlet extends HttpServlet {
-    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(ConfigParameters.MONITOR_ENDPOINT);
+    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(SeaCloudsProperties.get(SeaCloudsProperties.MONITOR_ENDPOINT));
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

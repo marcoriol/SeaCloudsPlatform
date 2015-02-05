@@ -36,6 +36,20 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-version}</version>
+        </dependency>
+
+        <!--  change binded logging framework accordingly -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j-version}</version>
+        </dependency>
+
 		<!-- import SLA projects -->
 		<dependency>
 			<groupId>eu.seaclouds</groupId>

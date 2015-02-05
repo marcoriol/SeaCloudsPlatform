@@ -22,7 +22,7 @@ import brooklyn.rest.domain.SensorSummary;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import eu.seaclouds.platform.dashboard.ConfigParameters;
+import eu.seaclouds.platform.dashboard.SeaCloudsProperties;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,11 +33,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * @author Adrian Nieto
- */
 public class GetAvailableMetricsServlet extends HttpServlet {
-    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(ConfigParameters.MONITOR_ENDPOINT);
+    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(SeaCloudsProperties.get(SeaCloudsProperties.MONITOR_ENDPOINT));
 
 
     private boolean isNumberType(SensorSummary sensor){

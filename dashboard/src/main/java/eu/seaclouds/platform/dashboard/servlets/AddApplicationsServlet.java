@@ -18,7 +18,7 @@ package eu.seaclouds.platform.dashboard.servlets;
 
 import brooklyn.rest.client.BrooklynApi;
 import com.google.gson.Gson;
-import eu.seaclouds.platform.dashboard.ConfigParameters;
+import eu.seaclouds.platform.dashboard.SeaCloudsProperties;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,11 +27,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 
-/**
- * @author Adrian Nieto
- */
 public class AddApplicationsServlet extends HttpServlet {
-    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(ConfigParameters.DEPLOYER_ENDPOINT);
+    final static BrooklynApi BROOKLKYN_API = new BrooklynApi(SeaCloudsProperties.get(SeaCloudsProperties.DEPLOYER_ENDPOINT));
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
