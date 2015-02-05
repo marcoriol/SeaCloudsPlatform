@@ -10,14 +10,27 @@ This is a proof of concept of the **SeaClouds Platform** ([www.seaclouds-project
 
 This work is part of the ongoing European research project *EC-FP7-ICT-610531* SeaClouds, and it's *currently under development*.
 
+Installation
+-------------------
+Before proceeding with the installation check that the following dependencies are met:
+  * Java 7
+  * Maven
+  * Git
+
+SeaClouds uses a modified version of Apache Brooklyn as its Deployer engine.
+```
+$ git clone https://github.com/SeaCloudsEU/incubator-brooklyn
+$ cd incubator-brooklyn
+$ mvn clean install -DskipTests
+$ brooklyn launch
+```
+
+Usage
+--------------------
+
 Contributing
 -------------
 If you want to help us with the development of this project please read carefully our [**Contributing Guide**](CONTRIBUTING.md).
-
-Getting Started
--------------------
-* Installation guide: TODO
-* Quickstart: TODO
 
 
 ##License##
