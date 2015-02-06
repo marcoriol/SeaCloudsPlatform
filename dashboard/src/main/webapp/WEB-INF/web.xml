@@ -34,63 +34,19 @@
         <param-value>false</param-value>
     </context-param>
 
-
     <servlet>
-        <servlet-name>GetMetricValueServlet</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.GetMetricValueServlet</servlet-class>
+        <servlet-name>SeaClouds REST Service</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>eu.seaclouds.api</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>GetMetricValueServlet</servlet-name>
-        <url-pattern>/servlets/getMetricValueServlet</url-pattern>
+        <servlet-name>SeaClouds REST Service</servlet-name>
+        <url-pattern>/api</url-pattern>
     </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>GetAvailableMetricsServlet</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.GetAvailableMetricsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>GetAvailableMetricsServlet</servlet-name>
-        <url-pattern>/servlets/getAvailableMetrics</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ListApplicationsServlet</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.ListApplicationsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ListApplicationsServlet</servlet-name>
-        <url-pattern>/servlets/listApplications</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>AddApplicationsServlet</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.AddApplicationsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddApplicationsServlet</servlet-name>
-        <url-pattern>/servlets/addApplication</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>RemoveApplicationsServlet</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.RemoveApplicationsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RemoveApplicationsServlet</servlet-name>
-        <url-pattern>/servlets/removeApplication</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetMatchmaking</servlet-name>
-        <servlet-class>eu.seaclouds.platform.dashboard.servlets.GetMatchmakingServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>GetMatchmaking</servlet-name>
-        <url-pattern>/servlets/getMatchmaking</url-pattern>
-    </servlet-mapping>
-
 
 </web-app>

@@ -1,6 +1,6 @@
 /**
  * Copyright 2014 SeaClouds
- * Contact: mbarrientos@lcc.uma.es
+ * Contact: dev@seaclouds-project.eu
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
  */
 package eu.seaclouds.platform.dashboard;
 
+import eu.seaclouds.deployer.SeaCloudsProperties;
 import org.testng.annotations.Test;
 
 import java.io.File;
