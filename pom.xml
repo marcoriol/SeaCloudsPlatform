@@ -26,7 +26,6 @@
         <module>deployer</module>
         <module>planner</module>
         <module>dashboard</module>
-        <module>sla-core</module>
         <module>core</module>
         <module>api</module>
     </modules>

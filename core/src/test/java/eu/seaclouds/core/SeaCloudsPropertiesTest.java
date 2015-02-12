@@ -14,24 +14,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package eu.seaclouds.platform.dashboard;
+package eu.seaclouds.core;
 
-import eu.seaclouds.deployer.SeaCloudsProperties;
 import org.testng.annotations.Test;
 
-import java.io.File;
-
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertNotNull;
 
 public class SeaCloudsPropertiesTest {
-
-    @Test
-    public void testFilePath() throws Exception {
-        File f = new File("seaclouds.properties");
-        assertTrue(f.exists());
-    }
-
     @Test
     public void testGetProperty() throws Exception {
         assertNotNull(SeaCloudsProperties.get(SeaCloudsProperties.DEPLOYER_ENDPOINT));
