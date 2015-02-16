@@ -24,10 +24,19 @@ public class Main {
 
     public static void main (String... args){
 
+        /*
+         * Launching Brooklyn engine
+         */
         BrooklynLauncher brooklynLauncher = BrooklynLauncher.newInstance();
-
         brooklynLauncher.webconsole(true);
-
         brooklynLauncher.start();
+
+        /*
+         * SeaClouds web server
+         */
+        SeaCloudsWebServer server = SeaCloudsWebServer.newInstance();
+        server.setPort(8080)
+                .setWarPath("/dashboard.war")
+                .start();
     }
 }

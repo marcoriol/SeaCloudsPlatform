@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+
+Copyright 2014 SeaClouds
+Contact: SeaClouds
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SeaClouds Dashboard - Demonstration for the First Review Meeting</title>
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Data Tables CSS -->
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/dataTables.responsive.css" rel="stylesheet">
+
+
+
+<style type="text/css"></style><style type="text/css"></style>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script></head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-brand extrnLink" href="http://www.seaclouds-project.eu/"> <img class="img-responsive " src="img/seaclouds-header.png" style="max-width: 100px; margin-top: -18px;" alt="SeaClouds project main website">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">SeaClouds Dashboard</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <!-- TODO: Get alert number from Monitoring API -->
+        <ul class="nav navbar-top-links navbar-right">
+
+            <li id="loading-spinner"></li>
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li class="divider"></li>
+
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="badge">0</span><i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i> </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                    <li><a href="#">
+                        <div>
+                            <i class="fa fa-exclamation fa-fw"></i>This feature will be
+                            available in prior releases<span class="pull-right text-muted small">Just now</span>
+                        </div>
+                    </a></li>
+                    <li class="divider"></li>
+
+                    <!-- TODO: Open all alerts page -->
+                    <li class="disabled"><a class="text-center" href="#"> <strong>See
+                        All Alerts</strong> <i class="fa fa-angle-right"></i>
+                    </a></li>
+                </ul>
+            </li>
+            <!-- /.dropdown-alerts -->
+            <!-- /.dropdown -->
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li class="disabled"><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a></li>
+                    <li class="disabled"><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-exclamation fa-fw"></i>
+                        This feature will be available in prior releases</a></li>
+                </ul>
+                <!-- /.dropdown-user --></li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="disabled"><a href="#"><i class="fa fa-dashboard fa-home"></i>&nbsp;Home</a></li>
+                    <li class="disabled"><a href="#" class=""><i class="fa fa-pencil-square-o"></i>&nbsp;Module Profile Designer</a></li>
+                    <li class="disabled"><a href="#" class=""><i class="fa fa-code-fork"></i>&nbsp;Discoverer &amp; Planner</a></li>
+                    <li class="disabled"><a href="#" class=""><i class="fa fa-download"></i>&nbsp;Deployer</a></li>
+                    <li class="disabled"><a href="#" class=""><i class="fa fa-dashboard"></i>&nbsp;Monitor</a></li>
+                    <li class="disabled"><a href="#" class=""><i class="fa fa-file-text-o"></i>&nbsp;SLA Service</a></li>
+                    <li><a href="demo.html" class=""><i class="fa fa-film"></i>&nbsp;SeaClouds Demo</a></li>
+
+
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row"><h1 id="seaclouds-platform">SeaClouds Platform</h1>
+
+<p><em>Summary on the different capabilities implemented by SeaClouds Platform.</em></p>
+
+<p>This document guides the user through the <a href="https://www.scenic.uma.es/projects/seaclouds/demo.html">SeaClouds Dashboard Demo</a>, describing the architecture of SeaClouds Platform and the workflow managed by each of the different components.</p><div class="row">
+			<div class="col-lg-12">
+            <div class="media">
+                <div class="media-body media-middle">
+                    <h4 class="media-heading"></h4>
+                    <iframe width="680" height="480" src="//www.youtube.com/embed/Nd77IWCDG18" frameborder="0" allowfullscreen=""></iframe>
+
+                </div>
+            </div>
+			</div>
+        </div>
+
+<hr>
+
+<p></p><div class="toc">
+<ul>
+<li><a href="#seaclouds-platform">SeaClouds Platform</a><ul>
+<li><a href="#home"> Home</a></li>
+<li><a href="#module-profile-designer"> Module Profile Designer</a></li>
+<li><a href="#discoverer-planner"> Discoverer &amp; Planner</a></li>
+<li><a href="#deployer"> Deployer</a></li>
+<li><a href="#monitor"> Monitor</a></li>
+<li><a href="#sla-service"> SLA Service</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+
+
+
+<h2 id="home"><i class="icon-home"></i> Home</h2>
+
+<p>This is a proof of concept of the SeaClouds Dashboard as result of the early prototype of the First Year of SeaClouds Platform. </p>
+
+<p>This current version offers a limited functionality of what expected from the finished product in the SeaClouds project, containing:</p>
+
+<ul>
+<li>a prototype on the <a href="#-module-profile-designer"><strong>Module Profile Designer</strong></a>, where the user can design the topology of the application,</li>
+<li>a first version of the <strong>Matchmaking process</strong> (in the <a href="#discoverer-planner">Discoverer &amp; Planner</a> components),</li>
+<li><strong>Deployment at IaaS level</strong> (in the <a href="#deployer">Deployer</a> component),</li>
+<li><strong>Monitoring mechanism</strong> to check sensors/information of the deployed application (in the <a href="#monitor">Monitor</a> component), </li>
+<li>and a first version of the <strong>SLA management</strong> checking QoS violations (in the <a href="#sla-service">SLA Service</a> omponent).</li>
+</ul>
+
+
+
+<h2 id="module-profile-designer"><i class="icon-fork"></i> Module Profile Designer</h2>
+
+<p>In this section, the user can easily <strong>design</strong> the topology of the application by dragging modules and <strong>configure</strong> them. This topology should include <strong>dependencies</strong> and <strong>connections</strong> between modules (<em>e.g. a Java web application needs access to an existing MySQL database</em>).</p>
+
+<p>Once the application topology has been defined, the designer will generate an <strong>Abstract Application Model</strong> using <a href="https://www.oasis-open.org/committees/tosca/"><strong>OASIS  TOSCA</strong></a> standard. This model will be passed to the next component: <a href="#discoverer-planner">Discoverer &amp; Planner</a>.</p>
+
+
+
+<h2 id="discoverer-planner"><i class="icon-pencil"></i> Discoverer &amp; Planner</h2>
+
+<p>In this phase, the user can modify (if needed) the generated Abstract Application Model using the YAML editor. This plan describes the multiple requirements and constraints on the modules that compose the application as well as some of the initial configuration. </p>
+
+<p>This model is then processed by the <strong>Planner</strong>, which will fill in the application configuration with the best configuration suitable for the specified constraints. This process of finding the best configuration is performed by the <strong>Optimizer</strong>. </p>
+
+<p>Once this process is completed, a <strong>Deployable Application Model (DAM)</strong>, following the <a href="https://www.oasis-open.org/committees/camp/">OASIS CAMP</a> standard), is generated and ready to be loaded by the SeaClouds <a href="#deployer"><strong>Deployer</strong></a>.</p>
+
+
+
+<h2 id="deployer"><i class="icon-upload"></i> Deployer</h2>
+
+<p>Next phase involves <strong>deploying the application</strong>. This task is initialized by the previosly generated Deployable Application Module, and it contains the final specification for the application configuration and topology. </p>
+
+<blockquote>
+  <p><strong>SeaClouds Deployer</strong> is built over <a href="https://brooklyn.incubator.apache.org/"><strong>Apache Brooklyn</strong></a>, a library and control plane for deploying and managing distributed applications. More details can be found <a href="https://brooklyn.incubator.apache.org/learnmore/features/index.html">here</a>.</p>
+</blockquote>
+
+<p>SeaClouds Deployer manages the deployed applications, allowing the user to <strong>execute management actions</strong> such as <em>start/stop/restart</em> on the application modules, <strong>explore the topology</strong> of the application or keep track of the status on the <strong>deployment phase</strong>.</p>
+
+
+
+<h2 id="monitor"><i class="icon-signal"></i> Monitor</h2>
+
+<p>In this section, the user perform a <strong>more detailed control</strong> on the behaviour of the application. The user can select one of the deployed applications, choosing from a list of metrics and <strong>drawing graphs</strong> that will be constantly updated with live data from the managed system.</p>
+
+
+
+<h2 id="sla-service"><i class="icon-file"></i> SLA Service</h2>
+
+<p>SeaClouds Platform also allows users to create and control <strong>SLA agreements</strong> with cloud providers. Using the <strong>SLA Service</strong> users can create a new SLA agreement that will guarantee some condition over the system and <strong>alert</strong> users when the agreements are violated.</p></div>
+        
+		
+    </div>
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Core Scripts - Include with every page -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.metisMenu.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/spin.min.js"></script>
+
+<!-- SB Admin Scripts - Include with every page -->
+<script src="js/sb-admin.js"></script>
+
+<!-- Data Tables Scripts -->
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/dataTables.bootstrap.js"></script>
+<script src="js/dataTables.responsive.js"></script>
+
+
+
+
+
+
+</body></html>
